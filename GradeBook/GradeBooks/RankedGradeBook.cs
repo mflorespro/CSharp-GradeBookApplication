@@ -18,6 +18,7 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException();
             }
 
+
             if (((this.Students.FindAll(x => x.AverageGrade >= 90).Count * 100) / this.Students.Count) <= 20)
             {
                 return 'A';
@@ -27,13 +28,13 @@ namespace GradeBook.GradeBooks
             {
                 return 'B';
             }
-            else if ((((this.Students.FindAll(x => x.AverageGrade >= 80).Count * 100) / this.Students.Count) > 40) &&
-                    (((this.Students.FindAll(x => x.AverageGrade >= 80).Count * 100) / this.Students.Count) <= 60))
+            else if ((((this.Students.FindAll(x => x.AverageGrade >= 70).Count * 100) / this.Students.Count) > 40) &&
+                    (((this.Students.FindAll(x => x.AverageGrade >= 70).Count * 100) / this.Students.Count) <= 60))
             {
                 return 'C';
             }
-            else if ((((this.Students.FindAll(x => x.AverageGrade >= 80).Count * 100) / this.Students.Count) > 60) &&
-                    (((this.Students.FindAll(x => x.AverageGrade >= 80).Count * 100) / this.Students.Count) <= 80))
+            else if ((((this.Students.FindAll(x => x.AverageGrade >= 60).Count * 100) / this.Students.Count) > 60) &&
+                    (((this.Students.FindAll(x => x.AverageGrade >= 60).Count * 100) / this.Students.Count) <= 80))
             {
                 return 'D';
             }
